@@ -1,0 +1,7 @@
+[workspace]
+members = [
+    "bin",
+    "lib",
+    "tools/dumper",
+    "tools/analyser",
+]

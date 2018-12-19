@@ -1,0 +1,69 @@
+/lol-lobby/v2/comms/members
+    Contains current party members
+/lol-gameflow/v1/session
+    Contains spectating info, game data, current map/game mode, and current phase(e.g. lobby, champ select)
+/lol-gameflow/v1/gameflow-metadata/player-status
+    Contains lobby data(invite privilege, who is invited, current lobby members, current gamemode)
+/lol-lobby/v2/received-invitations
+    Contains lobby invitations(who invited, what gamemode)
+/lol-lobby/v2/lobby
+    Contains lobby data
+/lol-lobby/v2/lobby/members
+    Contains lobby members data
+/lol-lobby-team-builder/v1/lobby/countdown
+    Contains data regarding current phase(matchmaking, afk check, champ select)
+/lol-lobby-team-builder/v1/matchmaking
+    Contains estimated queue time, current state
+/matchmaking/search-state
+    Contains matchmaking state
+/lol-matchmaking/v1/search
+    Contains matchmaking state
+/lol-lobby-team-builder/v1/lobby
+    Contains lobby data
+/lol-lobby/v1/lobby
+    Contains lobby data
+/lol-lobby/v1/lobby/members
+    contains lobby members data
+/lol-lobby/v1/lobby/invitations
+    contains lobby invitations
+/lol-matchmaking/v1/ready-check
+    AFK check
+/lol-lobby-team-builder/champ-select/v1/session
+    Contains champ select teams and general lobby data
+/lol-champ-select/v1/session
+    Seemingly pretty much identical to /lol-lobby-team-builder/champ-select/v1/session
+/lol-champ-select/v1/pickable-champions
+    Pickable champs
+/lol-champ-select/v1/bannable-champions
+    Bannable champs
+/lol-champ-select-legacy/v1/current-champion
+    User's current champion id
+/lol-champ-select-legacy/v1/session
+    champ select data, what has been banned of champs
+    seems to be used after champ select phase is done and game is about to begin
+/lol-settings/v1/account/page-settings
+    Contains runes related data
+/lol-settings/v2/account/PerksPreferences/page-settings
+    Just about the same as /lol-settings/v1/account/page-settings
+/data-store/v1/install-settings/gameflow-process-info
+    Contains game connection data
+/lol-ranked/v1/current-lp-change-notification
+    LP/ranked changes
+/lol-ranked/v1/ranked-reward-update
+    Ranked changes
+/lol-end-of-game/v1/eog-stats-block
+    End of game stats
+/lol-summoner/v1/current-summoner/autofill
+    Queues autofill data
+/lol-end-of-game/v1/champion-mastery-updates
+    End of game champion mastery update(includes game grade, e.g. S+, A-)
+/lol-collections/v1/inventories/20711025/champion-mastery
+    All champions mastery for user
+/riot-messaging-service/v1/message/cap/v1/wallets
+    Tokens earned from game
+/lol-missions/v1/missions
+    All current missions for user
+/lol-player-level-up/v1/level-up
+    Infomation about user level up
+/lol-lobby/v2/party-active
+    Data regarding whether the user currently is in a lobby

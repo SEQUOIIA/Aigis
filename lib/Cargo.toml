@@ -1,0 +1,25 @@
+[package]
+name = "aigis_lib"
+version = "0.1.0"
+authors = ["Emil H. Clausen (SEQUOIIA) <sequoiia@hummel.yt>"]
+edition = "2018"
+
+[dependencies]
+http = "0.1"
+hyper = "0.12.17"
+hyper-tls  = "0.3"
+futures = "0.1"
+num_cpus = "1.0"
+tokio = "0.1"
+reqwest = "0.9.5"
+url = "1.7.2"
+base64 = "0.10.0"
+openssl = "0.10.15"
+log = "0.4.6"
+native-tls = "0.2"
+regex = "1"
+tungstenite = {version = "0.6.1", path = "../../tungstenite-rs"}
+
+[dependencies.ws]
+version = "0.7.9"
+features = ["nativetls"]
