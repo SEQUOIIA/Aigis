@@ -1,4 +1,4 @@
-![logo](https://git.faker.clausen/root/lol_companion/raw/master/static/logo_white_transparent.png)
+![logo](https://github.com/SEQUOIIA/Aigis/blob/master/static/logo_white_transparent.png)
 # Aigis -  Your reliable DUO partner in League of legends
 
 Source code soon to be publicly available
