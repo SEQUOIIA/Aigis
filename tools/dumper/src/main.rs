@@ -17,8 +17,7 @@ fn main() {
             .short("p")
             .long("league-path")
             .help("Path to the League of Legends directory")
-            .takes_value(true)
-            .required(true))
+            .takes_value(true))
 
         .arg(Arg::with_name("debug")
             .short("d")
@@ -38,14 +37,7 @@ fn main() {
     }
 
     let mut client: aigis_lib::LCU::LCUClient = aigis_lib::LCU::LCUClient::new();
-
-    let path_arg : &str = match clap_args.value_of("league-path") {
-        Some(s) => s,
-        None => {
-            println!("No path was provided\n\n{}", clap_args.usage());
-            std::process::exit(1);
-        },
-    };
+    
     match clap_args.subcommand() {
         ("websocket", Some(_data)) => {
             let lockfile : aigis_lib::LCU::LockFile = aigis_lib::LCU::LockFile::get_connection_info().unwrap();
