@@ -112,21 +112,25 @@ fn uri_gatherer(payload : String, files : &mut std::collections::HashSet<String>
     match serde_json::from_str::<serde_json::Value>(payload.as_str()) {
         Ok(v) => {
             let v_array : &Vec<serde_json::Value> = v.as_array().unwrap();
-            let v_object : &serde_json::map::Map<String, serde_json::Value> = v_array[2].as_object().unwrap();
-            let uri : &str = v_object.get("uri").unwrap().as_str().unwrap();
-            let file_name : String = uri.clone().replace("/", "_");
-            if !files.contains(file_name.as_str()) {
-                files.insert(file_name.clone());
 
-                let path_raw : String = format!("{}/{}.json", output_path, file_name.as_str());
-                let path : &Path = Path::new(path_raw.as_str());
-                let mut file : File = File::create(path).unwrap();
-                let payload : String = v_array[2].to_string();
-                file.write_all(payload.as_bytes());
+            if let Some(v_object) = v_array[2].as_object() {
+                let uri : &str = v_object.get("uri").unwrap().as_str().unwrap();
 
-                // uri_file line
-                let uri_file_line : String = format!("{} - {}.json\n", uri, file_name);
-                uri_file.write_all(uri_file_line.as_bytes());
+                let mut file_name : String = uri.clone().replace("/", "_");
+                file_name = file_name.replace(":", "-");
+                if !files.contains(file_name.as_str()) {
+                    files.insert(file_name.clone());
+                    let mut path_raw : String = format!("{}/{}.json", output_path, file_name.as_str());
+                    let path : &Path = Path::new(path_raw.as_str());
+                    debug!("{:?}", path);
+                    let mut file : File = File::create(path).unwrap();
+                    let payload : String = v_array[2].to_string();
+                    file.write_all(payload.as_bytes());
+
+                    // uri_file line
+                    let uri_file_line : String = format!("{} - {}.json\n", uri, file_name);
+                    uri_file.write_all(uri_file_line.as_bytes());
+                }
             }
         },
         Err(_e) => {}
