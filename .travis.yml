@@ -3,4 +3,5 @@ rust:
   - stable
 cache: cargo
 script:
-  - cargo build --all --release
+  - cd .. && git clone https://github.com/SEQUOIIA/tungstenite-rs.git
+  - cd Aigis && cargo build --all --release
