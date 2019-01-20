@@ -1,5 +1,6 @@
 ![logo](https://github.com/SEQUOIIA/Aigis/blob/master/static/logo_white_transparent.png)
 # Aigis -  Your reliable DUO partner in League of legends
+Master - [![Build Status](https://travis-ci.com/SEQUOIIA/Aigis.svg?branch=master)](https://travis-ci.com/SEQUOIIA/Aigis)
 
 Source code soon to be publicly available
 
