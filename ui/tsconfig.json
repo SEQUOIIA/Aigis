@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+      "module": "commonjs",
+      "noImplicitAny": true,
+      "sourceMap": true,
+      "removeComments": true,
+      "outDir": "dist",
+      "baseUrl": ".",
+      "target": "es6",
+      "paths": {
+        "*": ["node_modules/*"]
+      }
+    },
+    "include": [
+      "src/**/*"
+    ]
+  }
